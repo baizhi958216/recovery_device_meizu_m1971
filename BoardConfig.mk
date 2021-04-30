@@ -99,3 +99,80 @@ TW_USE_TOOLBOX := true
 TW_IGNORE_MISC_WIPE_DATA := true
 TW_USE_LEDS_HAPTICS := true
 TW_SKIP_COMPATIBILITY_CHECK := true
+
+# SHRP Bringup
+# Device codename
+# Default (if not set): N/A
+SHRP_DEVICE_CODE := m1971
+
+# Path of your SHRP device tree
+# Replace <device-brand> with the device brand name
+# (SHRP_DEVICE_CODE will expand to the above variable so check if that is correct)
+SHRP_PATH := device/meizu/$(SHRP_DEVICE_CODE)
+
+# Maintainer name
+# Default (if not set): N/A
+SHRP_MAINTAINER := AndyCong
+
+# Recovery Type (for "About" section only)
+# Default (if not set): N/A
+SHRP_REC_TYPE := SAR
+
+# Device Type (for "About" section only)
+# Default (if not set): N/A
+SHRP_DEVICE_TYPE := A_Only
+
+# Your device's recovery path, dont use blindly
+# No default
+SHRP_REC := /dev/block/bootdevice/by-name/recovery
+
+################### ################################################################################
+# IMPORTANT FLAGS # These are usually good to check - at least if the defaults are what you expect #
+################### ################################################################################
+
+# Emergency DownLoad mode (0 = no EDL mode, 1 = EDL mode available)
+# Default (if not set): 0
+SHRP_EDL_MODE := 1
+
+# internal storage path
+# Default (if not set): /sdcard
+SHRP_INTERNAL := /sdcard
+
+# USB OTG path
+# Default (if not set): /
+SHRP_OTG := /usb_otg
+
+# Flashlight: (0 = disable, 1 = enable)
+# Default (if not set): 0
+SHRP_FLASH := 1
+
+################## #########################################################################
+# OPTIONAL FLAGS # Stuff which highly depends on your device and / or personal preferences #
+################## #########################################################################
+
+# SHRP padding flag (for rounded corner devices only)
+# You have to change these values according to your device's roundness.
+SHRP_STATUSBAR_RIGHT_PADDING := 46
+# Default (for LEFT): 20
+SHRP_STATUSBAR_LEFT_PADDING := 46
+
+# SHRP Express, enables on-the-fly theme patching (also persistent) + persistent lock
+# Default (if not set) is not using Express
+# Set this variable when true ONLY (do not use "false" or similiar)
+SHRP_EXPRESS := true
+
+# SHRP Dark mode, use this flag to have dark theme set by default
+# Default (if not set) is not using DARK mode
+# Set this variable when true ONLY (do not use "false" or similiar)
+SHRP_DARK := true
+
+# custom led paths for flashlight
+# find yours then replace the examples here
+SHRP_CUSTOM_FLASHLIGHT := true
+SHRP_FONP_1 := /sys/class/leds/led:torch_0/brightness
+SHRP_FONP_2 := /sys/class/leds/led:torch_1/brightness
+SHRP_FONP_3 := /sys/class/leds/led:switch/brightness
+
+# Max brightness of flashlight
+# you can also check the above led paths in Android when you turn on flashlight
+SHRP_FLASH_MAX_BRIGHTNESS := 500
