@@ -99,6 +99,7 @@ TW_USE_TOOLBOX := true
 TW_IGNORE_MISC_WIPE_DATA := true
 TW_USE_LEDS_HAPTICS := true
 TW_SKIP_COMPATIBILITY_CHECK := true
+TW_DEFAULT_LANGUAGE := zh_CN
 
 # SHRP Bringup
 # Device codename
