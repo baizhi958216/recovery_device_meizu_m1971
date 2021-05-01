@@ -162,3 +162,15 @@ SHRP_EXPRESS := true
 # Default (if not set) is not using DARK mode
 # Set this variable when true ONLY (do not use "false" or similiar)
 SHRP_DARK := true
+
+# Addon - Substratum Overlay (OMS -Normal- disabler)
+INC_IN_REC_ADDON_1 := true
+
+# Addon - Substratum Overlay (OMS -legacy- disabler)
+INC_IN_REC_ADDON_2 := true
+
+# Addon - Clear Fingerprint (remove fingerprint lock from system)
+INC_IN_REC_ADDON_3 := true
+
+# Addon - Force Encryption (remove force encryption from your device)
+INC_IN_REC_ADDON_4 := true
